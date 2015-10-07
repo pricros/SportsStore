@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SportsStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="94" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="lMW-Ks-NpD">
+                                <rect key="frame" x="0.0" y="20" width="600" height="543"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProductCell" rowHeight="94" id="F9F-rQ-cvN" customClass="ProductTableCell" customModule="SportsStore">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F9F-rQ-cvN" id="nwg-kq-Ci0">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vnd-oQ-2Fe" userLabel="Name Label">
+                                                    <rect key="frame" x="8" y="7" width="332" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="a6q-cc-Yt3"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j19-aC-0NM">
+                                                    <rect key="frame" x="8" y="55" width="584" height="27"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KLC-AC-4We">
+                                                    <rect key="frame" x="495" y="7" width="97" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="97" id="66d-By-NQz"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="stockLevelDidChange:" destination="BYZ-38-t0r" eventType="editingChanged" id="k6v-dx-vfY"/>
+                                                    </connections>
+                                                </textField>
+                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="YJP-Gf-jTb">
+                                                    <rect key="frame" x="372" y="8" width="94" height="29"/>
+                                                    <connections>
+                                                        <action selector="stockLevelDidChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="yN9-4V-0o0"/>
+                                                    </connections>
+                                                </stepper>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="KLC-AC-4We" firstAttribute="leading" secondItem="YJP-Gf-jTb" secondAttribute="trailing" constant="29" id="3l1-FK-ppy"/>
+                                                <constraint firstItem="j19-aC-0NM" firstAttribute="trailing" secondItem="nwg-kq-Ci0" secondAttribute="trailingMargin" id="Jph-gD-JC7"/>
+                                                <constraint firstItem="j19-aC-0NM" firstAttribute="leading" secondItem="nwg-kq-Ci0" secondAttribute="leadingMargin" id="Kyp-kd-IjF"/>
+                                                <constraint firstItem="KLC-AC-4We" firstAttribute="trailing" secondItem="nwg-kq-Ci0" secondAttribute="trailingMargin" id="Pl5-YF-OuV"/>
+                                                <constraint firstItem="YJP-Gf-jTb" firstAttribute="top" secondItem="nwg-kq-Ci0" secondAttribute="topMargin" id="fG1-kP-3xu"/>
+                                                <constraint firstItem="Vnd-oQ-2Fe" firstAttribute="leading" secondItem="nwg-kq-Ci0" secondAttribute="leadingMargin" id="hIv-Z7-t4t"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="j19-aC-0NM" secondAttribute="bottom" constant="3" id="jaP-Yh-Tyy"/>
+                                                <constraint firstItem="KLC-AC-4We" firstAttribute="top" secondItem="nwg-kq-Ci0" secondAttribute="topMargin" constant="-1" id="k9L-na-ep3"/>
+                                                <constraint firstItem="YJP-Gf-jTb" firstAttribute="leading" secondItem="Vnd-oQ-2Fe" secondAttribute="trailing" constant="32" id="k9R-7L-BPM"/>
+                                                <constraint firstItem="Vnd-oQ-2Fe" firstAttribute="top" secondItem="nwg-kq-Ci0" secondAttribute="topMargin" constant="-1" id="uNY-lo-5eR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="j19-aC-0NM" id="Qmh-K4-RiF"/>
+                                            <outlet property="nameLabel" destination="Vnd-oQ-2Fe" id="zK0-XK-8fs"/>
+                                            <outlet property="stockField" destination="KLC-AC-4We" id="Pia-fg-xDH"/>
+                                            <outlet property="stockStepper" destination="YJP-Gf-jTb" id="9ip-FM-aLk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="35a-oo-Rhw"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTt-lV-ldt">
+                                <rect key="frame" x="0.0" y="562" width="600" height="38"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="yXP-dY-KTp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="FTt-lV-ldt" secondAttribute="trailing" constant="-16" id="9GG-dK-VOg"/>
+                            <constraint firstItem="FTt-lV-ldt" firstAttribute="top" secondItem="lMW-Ks-NpD" secondAttribute="bottom" constant="-1" id="AiQ-Mu-Hk9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="FTt-lV-ldt" secondAttribute="bottom" id="O8g-R8-q3d"/>
+                            <constraint firstItem="lMW-Ks-NpD" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="TsL-vt-1CO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lMW-Ks-NpD" secondAttribute="trailing" constant="-16" id="Upm-NL-Y1k"/>
+                            <constraint firstItem="FTt-lV-ldt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="k6d-Sw-Uwz"/>
+                            <constraint firstItem="lMW-Ks-NpD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="wnw-wC-xNt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="lMW-Ks-NpD" id="8im-tJ-BEU"/>
+                        <outlet property="totalStockLabel" destination="FTt-lV-ldt" id="xMJ-EA-uL7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="235" y="304"/>
+        </scene>
+    </scenes>
+</document>
