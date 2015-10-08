@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2225A78E1BAF3D8400C1E1CE /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2225A78D1BAF3D8400C1E1CE /* Logger.swift */; };
+		22825ABF1BC5B3090070F04A /* NetworkConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22825ABE1BC5B3090070F04A /* NetworkConnection.swift */; };
+		22825AC11BC6B45A0070F04A /* NetworkPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22825AC01BC6B45A0070F04A /* NetworkPool.swift */; };
 		22C28A371BA49542008A0159 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C28A361BA49542008A0159 /* Utils.swift */; };
 		22C28A391BA49D51008A0159 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22C28A381BA49D51008A0159 /* Product.swift */; };
 		22D83E881B8DF7AF004FF789 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D83E871B8DF7AF004FF789 /* AppDelegate.swift */; };
@@ -30,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		2225A78D1BAF3D8400C1E1CE /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		22825ABE1BC5B3090070F04A /* NetworkConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConnection.swift; sourceTree = "<group>"; };
+		22825AC01BC6B45A0070F04A /* NetworkPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkPool.swift; sourceTree = "<group>"; };
 		22C28A361BA49542008A0159 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		22C28A381BA49D51008A0159 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		22D83E821B8DF7AF004FF789 /* SportsStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SportsStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +96,8 @@
 				22C28A361BA49542008A0159 /* Utils.swift */,
 				22C28A381BA49D51008A0159 /* Product.swift */,
 				2225A78D1BAF3D8400C1E1CE /* Logger.swift */,
+				22825ABE1BC5B3090070F04A /* NetworkConnection.swift */,
+				22825AC01BC6B45A0070F04A /* NetworkPool.swift */,
 			);
 			path = SportsStore;
 			sourceTree = "<group>";
@@ -223,9 +229,11 @@
 			files = (
 				2225A78E1BAF3D8400C1E1CE /* Logger.swift in Sources */,
 				22D83E8A1B8DF7AF004FF789 /* ViewController.swift in Sources */,
+				22825ABF1BC5B3090070F04A /* NetworkConnection.swift in Sources */,
 				22C28A391BA49D51008A0159 /* Product.swift in Sources */,
 				22D83E881B8DF7AF004FF789 /* AppDelegate.swift in Sources */,
 				22C28A371BA49542008A0159 /* Utils.swift in Sources */,
+				22825AC11BC6B45A0070F04A /* NetworkPool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
