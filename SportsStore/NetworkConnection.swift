@@ -26,7 +26,7 @@ class NetworkConnection {
     // this method looks up a product in the dictionary and returns the stock level value
     // NSThread.sleepForTimeInterval adds a random delay of one second to some requests
     func getStockLevel(name: String) -> Int? {
-        NSThread.sleepForTimeInterval(Double(rand() % 2))
+        NSThread.sleepForTimeInterval(Double(rand() % 10))
         return stockData[name]
     }
     

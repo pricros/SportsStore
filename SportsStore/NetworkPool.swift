@@ -27,7 +27,10 @@ final class NetworkPool {
         queue = dispatch_queue_create("networkpoolQ", DISPATCH_QUEUE_SERIAL)
     }
     
+    
+    // gets a connection from the pool
     private func doGetConnection() -> NetworkConnection {
+        
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
         var result: NetworkConnection? = nil
         dispatch_sync(queue) {
