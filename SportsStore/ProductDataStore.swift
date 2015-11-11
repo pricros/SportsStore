@@ -30,6 +30,7 @@ final class ProductDataStore {
             // delays in getting stock information don't prevent more important tasks from 
             // being performed
             dispatch_async(self.networkQ) {
+                // 2. Checkout of pool
                 let stockConn = NetworkPool.getConnection()
                 let level = stockConn.getStockLevel(p.name)
                 if (level != nil) {
@@ -44,6 +45,7 @@ final class ProductDataStore {
                     
                     }
                 }
+                // 4.Check connection back in to the pool
                 NetworkPool.returnConnection(stockConn)
             }
             

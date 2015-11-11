@@ -16,13 +16,17 @@ final class NetworkPool {
     //singleton:
     static let sharedInstance = NetworkPool()
     
+    private var itemsCreated = 0
+    
     
     
     private init() {
+        /*
         for _ in 0..<connectionCount {
             connections.append(NetworkConnection())
             
-        }
+        }*/
+        
         semaphore = dispatch_semaphore_create(connectionCount)
         queue = dispatch_queue_create("networkpoolQ", DISPATCH_QUEUE_SERIAL)
     }
@@ -34,7 +38,14 @@ final class NetworkPool {
         dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER)
         var result: NetworkConnection? = nil
         dispatch_sync(queue) {
-            result = self.connections.removeAtIndex(0)
+            
+            // lazily create NetworkConnection objects
+            if (self.connections.count > 0) {
+                result = self.connections.removeAtIndex(0)
+            } else if (self.itemsCreated < self.connectionCount) {
+                result = NetworkConnection()
+                self.itemsCreated++
+            }
         }
         return result!
     }

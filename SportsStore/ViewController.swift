@@ -41,6 +41,7 @@ class ViewController: UIViewController, UITableViewDataSource {
         //this was set in the storyboard
         //tableView.dataSource = self
         
+        //&Tutor: question&
         productStore.callback = { (p: Product) in
             for cell in self.tableView.visibleCells() {
                 if let pcell = cell as? ProductTableCell {
